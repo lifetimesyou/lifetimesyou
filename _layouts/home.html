@@ -1,0 +1,84 @@
+<!doctype html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>{{ page.title }}</title>
+	<meta name="author" content="{{ page.author }}" />
+	<meta name="description" content="" />
+
+	<meta name="google-site-verification" content="" />
+
+	<meta name="Copyright" content="{{ page.author }}" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!-- 	<link rel="shortcut icon" href="favicon.ico" /> -->
+
+	<link rel="stylesheet" href="/assets/css/reset.css" />
+	<link rel="stylesheet" href="/assets/css/style.css" />
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:url" content="">
+
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	
+	<style>
+		
+	</style>
+	
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+
+</head>
+
+<body id="home">
+	
+	<div id="wrapper">
+
+		<header>
+	
+			<a href="/">{% include svg/logo.svg %}</a>
+			
+			<div id="right-side">
+			
+				<nav>
+					<ol>
+						<li><a href="">{% include svg/info.svg %}</a></li>
+						<li><a href="">{% include svg/twitter.svg %}</a></li>
+						<li><a href="">{% include svg/facebook.svg %}</a></li>
+					</ol>
+				</nav>
+					
+				<div id="audio-controls" onclick="switchPlayback()">
+					{% include svg/play.svg %}
+				</div>
+			
+			</div>
+	
+		</header>
+		
+		<div id="posts">
+			{% for post in site.posts %}
+			
+				<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
+					<span></span>
+					{% include svg/{{post.title}}.svg %}
+					<span>{{post.date | date: '%B %d, %Y'}}</span>
+				</a>
+			
+			{% endfor %}
+		</div>
+	
+	</div>
+
+<!-- <script src="assets/js/functions.js"></script> -->
+
+</body>
+</html>

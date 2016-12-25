@@ -1,0 +1,84 @@
+<!doctype html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>{{ page.name }} | {{ page.title }}</title>
+	<meta name="author" content="{{ page.author }}" />
+	<meta name="description" content="" />
+
+	<meta name="google-site-verification" content="" />
+
+	<meta name="Copyright" content="{{ page.author }}" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!-- 	<link rel="shortcut icon" href="favicon.ico" /> -->
+
+	<link rel="stylesheet" href="/assets/css/reset.css" />
+	<link rel="stylesheet" href="/assets/css/style.css" />
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:url" content="">
+
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	
+	<style>
+		
+		body {
+			background-color: {{ page.color2 }};
+			color: {{ page.color1 }}
+		}
+		
+		svg {
+			fill: {{ page.color1 }}
+		}
+		
+		header a svg {
+			fill: {{ page.color1 }}
+		}
+		
+		#audio-controls svg {
+			fill: {{ page.color1 }};
+		}
+		
+	</style>
+	
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i" rel="stylesheet">
+
+</head>
+
+<body id="post">
+
+	<header>
+		<a href="/">{% include svg/logo.svg %}</a>
+
+		<audio id="player" autoplay loop src="{{site.baseurl}}/assets/audio/{{page.title}}.mp3"></audio>
+			
+		<div id="audio-controls" onclick="switchPlayback()">
+			{% include svg/play.svg %}
+		</div>
+		
+	</header>
+	
+	<div id="title">
+		{% include svg/{{page.title}}.svg %}
+	</div>
+
+	<article>
+		{{ content }}
+	</article>
+	
+	<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
+
+<script src="{{site.baseurl}}/assets/js/functions.js"></script>
+
+</body>
+</html>
