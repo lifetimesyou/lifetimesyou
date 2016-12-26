@@ -1,50 +1,14 @@
 var audioPlayer = document.getElementById("player")
-
-var playingEventWasCalled = false
-audioPlayer.addEventListener("playing", boom)
-
-var volumeVariable = 0.5
-audioPlayer.volume = volumeVariable
-
 var isPlaying = false
-
-function boom() {
-	if (playingEventWasCalled == false) {
-	
-		isPlaying = true
-		togglePlayIcon()
-		
-		playingEventWasCalled = true
-		
-		if (audioPlayer.volume != 1) {
-		
-			var myInterval = setInterval( function() {
-				
-				volumeVariable = volumeVariable + 0.01
-				audioPlayer.volume = volumeVariable
-				console.log(audioPlayer.volume)
-			
-				if (audioPlayer.volume > 0.99) {
-					clearInterval(myInterval)
-				}
-				
-			}, 100)
-			
-		}
-	
-	} else {
-		return
-	}
-}
 
 function switchPlayback() {
 	if (isPlaying) {
-		document.getElementById("player").pause()
+		audioPlayer.pause()
 		isPlaying = false
 		togglePlayIcon()
 
 	} else {
-		document.getElementById("player").play()
+		audioPlayer.play()
 		isPlaying = true
 		togglePlayIcon()
 	}
