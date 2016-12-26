@@ -8,13 +8,9 @@
 	<meta name="author" content="{{ page.author }}" />
 	<meta name="description" content="" />
 
-	<meta name="google-site-verification" content="" />
-
 	<meta name="Copyright" content="{{ page.author }}" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-<!-- 	<link rel="shortcut icon" href="favicon.ico" /> -->
 
 	<link rel="stylesheet" href="/assets/css/reset.css" />
 	<link rel="stylesheet" href="/assets/css/style.css" />
@@ -56,7 +52,7 @@
 					</ol>
 				</nav>
 				
-				<audio id="player" autoplay loop src="{{site.baseurl}}/assets/audio/index.mp3"></audio>
+				<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
 					
 				<div id="audio-controls" onclick="switchPlayback()">
 					{% include svg/play.svg %}
@@ -72,7 +68,7 @@
 			
 				<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
 					<span></span>
-					{% include svg/{{post.title}}.svg %}
+					{% include titles/{{ post.date | date: '%Y-%m-%d'}}-{{ post.title | downcase }}.svg %}
 					<span>{{post.date | date: '%B %d, %Y'}}</span>
 				</a>
 			

@@ -8,24 +8,20 @@
 	<meta name="author" content="{{ page.author }}" />
 	<meta name="description" content="" />
 
-	<meta name="google-site-verification" content="" />
-
 	<meta name="Copyright" content="{{ page.author }}" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-<!-- 	<link rel="shortcut icon" href="favicon.ico" /> -->
 
 	<link rel="stylesheet" href="/assets/css/reset.css" />
 	<link rel="stylesheet" href="/assets/css/style.css" />
 
 	<meta name="twitter:card" content="">
 	<meta name="twitter:site" content="">
-	<meta name="twitter:title" content="">
+	<meta name="twitter:title" content="{{ page.name }} | {{ page.title }}">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:url" content="">
 
-	<meta property="og:title" content="" />
+	<meta property="og:title" content="{{ page.name }} | {{ page.title }}" />
 	<meta property="og:description" content="" />
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
@@ -60,7 +56,7 @@
 	<header>
 		<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
 
-		<audio id="player" autoplay loop src="{{site.baseurl}}/assets/audio/{{page.title}}.mp3"></audio>
+		<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3"></audio>
 			
 		<div id="audio-controls" onclick="switchPlayback()">
 			{% include svg/play.svg %}
@@ -70,7 +66,7 @@
 	</header>
 	
 	<div id="title">
-		{% include svg/{{page.title}}.svg %}
+		{% include titles/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.svg %}
 	</div>
 
 	<article>
