@@ -35,46 +35,42 @@
 </head>
 
 <body id="home">
-	
-	<div id="wrapper">
 
-		<header>
-	
-			<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
-			
-			<div id="right-side">
-			
-				<nav>
-					<ol>
-						<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
-						<li><a href="http://twtter.com" id="twitter-link">{% include svg/twitter.svg %}</a></li>
-						<li><a href="http://facebook.com" id="facebook-link">{% include svg/facebook.svg %}</a></li>
-					</ol>
-				</nav>
-				
-				<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
-					
-				<div id="audio-controls" onclick="switchPlayback()">
-					{% include svg/play.svg %}
-					{% include svg/pause.svg %}
-				</div>
-			
-			</div>
-	
-		</header>
+	<header>
+
+		<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
 		
-		<div id="posts">
-			{% for post in site.posts %}
+		<div id="right-side">
+		
+			<nav>
+				<ol>
+					<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
+					<li><a href="http://twtter.com" id="twitter-link">{% include svg/twitter.svg %}</a></li>
+					<li><a href="http://facebook.com" id="facebook-link">{% include svg/facebook.svg %}</a></li>
+				</ol>
+			</nav>
 			
-				<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
-					<span></span>
-					{% include titles/{{ post.date | date: '%Y-%m-%d'}}-{{ post.title | downcase }}.svg %}
-					<span>{{post.date | date: '%B %d, %Y'}}</span>
-				</a>
-			
-			{% endfor %}
+			<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
+				
+			<div id="audio-controls" onclick="switchPlayback()">
+				{% include svg/play.svg %}
+				{% include svg/pause.svg %}
+			</div>
+		
 		</div>
+
+	</header>
 	
+	<div id="posts">
+		{% for post in site.posts %}
+		
+			<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
+				<span></span>
+				{% include titles/{{ post.date | date: '%Y-%m-%d'}}-{{ post.title | downcase }}.svg %}
+				<span>{{post.date | date: '%B %d, %Y'}}</span>
+			</a>
+		
+		{% endfor %}
 	</div>
 
 <script src="assets/js/functions.js"></script>
