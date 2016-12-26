@@ -55,9 +55,12 @@
 						<li><a href="http://facebook.com" id="facebook-link">{% include svg/facebook.svg %}</a></li>
 					</ol>
 				</nav>
+				
+				<audio id="player" autoplay loop src="{{site.baseurl}}/assets/audio/index.mp3"></audio>
 					
 				<div id="audio-controls" onclick="switchPlayback()">
 					{% include svg/play.svg %}
+					{% include svg/pause.svg %}
 				</div>
 			
 			</div>
@@ -78,7 +81,7 @@
 	
 	</div>
 
-<!-- <script src="assets/js/functions.js"></script> -->
+<script src="assets/js/functions.js"></script>
 
 </body>
 </html>

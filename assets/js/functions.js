@@ -52,11 +52,11 @@ function switchPlayback() {
 
 function togglePlayIcon() {
 	if (isPlaying) {
-		document.getElementById("play").style.opacity = 0
-		document.getElementById("pause").style.opacity = 1
+		document.getElementById("play-button").style.display = "none"
+		document.getElementById("pause-button").style.display = "block"
 	} else {
-		document.getElementById("play").style.opacity = 1
-		document.getElementById("pause").style.opacity = 0
+		document.getElementById("play-button").style.display = "block"
+		document.getElementById("pause-button").style.display = "none"
 	}
 }
 
