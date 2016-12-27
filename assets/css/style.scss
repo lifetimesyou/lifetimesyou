@@ -5,7 +5,7 @@ body {
 	font-family: 'Merriweather', serif;
 	font-size: 24px;
 	background-color: hsl(0, 0, 98);
-	padding: 0 1em;
+	padding: 0 0.8em;
 }
 
 svg {
@@ -17,7 +17,7 @@ svg {
 }
 
 header {
-	padding: 1em 0;
+	padding: 1em 0.2em 0.8em;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -78,13 +78,21 @@ header {
 	display: flex;
 	height: 100%;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	
 	text-align: center;
 	svg {
 		display: block;
 		width: 90%;
 		height: 3em;
+	}
+	
+	.post-wrapper {
+		padding: .2em;
+		width: 33.3%;
+	}
+	
+	.post-wrapper:first-child {
+		width: 100%;
 	}
 
 	a {
@@ -95,9 +103,7 @@ header {
 		text-decoration: none;
 		color: inherit;
 		padding: 2em;
-		width: 33%;
 		height: 10em;
-		margin-bottom: .4em;
 		
 		border: 1px solid rgba(0, 0, 0, 0.05);
 	}
@@ -150,8 +156,8 @@ header {
 @media screen and (max-width: 1024px) {
 
 #posts {
-	a {
-		width: 49.5%;
+	.post-wrapper {
+		width: 50%;
 	}
 }
 
@@ -160,7 +166,7 @@ header {
 @media screen and (max-width: 680px) {
 
 #posts {
-	a {
+	.post-wrapper {
 		width: 100%;
 	}
 }
