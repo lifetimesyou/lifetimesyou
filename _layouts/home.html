@@ -42,7 +42,7 @@
 		
 		<div id="right-side">
 		
-			<nav>
+			<nav id="top-nav">
 				<ol>
 					<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
 					<li><a href="http://twtter.com" id="twitter-link">{% include svg/twitter.svg %}</a></li>
@@ -72,6 +72,14 @@
 			</div>
 		{% endfor %}
 	</div>
+	
+	<nav id="bottom-nav">
+		<ol>
+			<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
+			<li><a href="http://twtter.com" id="twitter-link">{% include svg/twitter.svg %}</a></li>
+			<li><a href="http://facebook.com" id="facebook-link">{% include svg/facebook.svg %}</a></li>
+		</ol>
+	</nav>
 
 <script src="assets/js/functions.js"></script>
 
