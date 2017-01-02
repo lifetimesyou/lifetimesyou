@@ -1,5 +1,7 @@
 var audioPlayer = document.getElementById("player")
-var isPlaying = false
+var isPlaying = true
+
+audioPlayer.addEventListener("playing", togglePlayIcon)
 
 function switchPlayback() {
 	if (isPlaying) {

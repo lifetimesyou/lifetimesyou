@@ -30,7 +30,7 @@
 		
 	</style>
 	
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i" rel="stylesheet">
 
 </head>
 
@@ -66,7 +66,7 @@
 			<div class="post-wrapper">
 				<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
 					<span></span>
-					{% include titles/{{ post.date | date: '%Y-%m-%d'}}-{{ post.title | downcase }}.svg %}
+					<h1>{{ post.title | uppercase }}</h1>
 					<span>{{post.date | date: '%B %d, %Y'}}</span>
 				</a>
 			</div>

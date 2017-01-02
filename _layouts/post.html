@@ -41,7 +41,7 @@
 			fill: {{ page.color1 }}
 		}
 		
-		#audio-controls svg {
+		header #audio-controls svg {
 			fill: {{ page.color1 }};
 		}
 		
@@ -66,7 +66,7 @@
 	</header>
 	
 	<div id="title">
-		{% include titles/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.svg %}
+		{{ page.title | uppercase }}
 	</div>
 
 	<article>

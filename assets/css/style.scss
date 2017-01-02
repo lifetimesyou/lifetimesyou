@@ -6,13 +6,23 @@ body {
 	font-size: 24px;
 	background-color: hsl(0, 0, 98);
 	padding: 0 0.8em;
+	color: #666666;
+}
+
+p {
+	line-height: 1.6em;
+	a {
+		text-decoration: none;
+		color: #666666;
+		border-bottom: 2px solid #c0c0c0;
+	}
 }
 
 svg {
 	display: block;
 }
 
-#play-button {
+#pause-button {
 	display: none;
 }
 
@@ -32,6 +42,7 @@ header {
 		svg {
 			width: 1.8em;
 			height: 1.8em;
+			fill: #B2B2B2;
 		}
 	}
 	
@@ -42,9 +53,6 @@ header {
 			padding-left: 1.1em;
 			margin-left: 0.65em;
 			border-left: 3px solid #F2F2F2;
-			svg {
-				fill: #B2B2B2;
-			}
 		}
 	}
 }
@@ -86,13 +94,7 @@ nav {
 	display: flex;
 	height: 100%;
 	flex-wrap: wrap;
-	
 	text-align: center;
-	svg {
-		display: block;
-		width: 90%;
-		height: 3em;
-	}
 	
 	.post-wrapper {
 		padding: .2em;
@@ -100,7 +102,7 @@ nav {
 	}
 	
 	.post-wrapper:first-child {
-		width: 100%;
+		width: 66.6%;
 	}
 
 	a {
@@ -114,6 +116,10 @@ nav {
 		height: 10em;
 		
 		border: 1px solid rgba(0, 0, 0, 0.05);
+	}
+	
+	h1 {
+		font-size: 2em;
 	}
 	
 	span {
@@ -131,14 +137,11 @@ nav {
 	}
 	
 	#title {
-		height: 75vh;
+		height: 65vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		
-		svg {
-			width: 50%;
-		}
+		font-size: 4em;
 	}
 		
 	article {
@@ -156,7 +159,6 @@ nav {
 		font-size: .75em;
 		display: block;
 		opacity: .75;
-		font-weight: 700;
 		padding: 5em 0 8em;
 	}
 }
@@ -166,6 +168,9 @@ nav {
 #posts {
 	.post-wrapper {
 		width: 50%;
+	}
+	.post-wrapper:first-child {
+		width: 100%;
 	}
 }
 
@@ -202,5 +207,4 @@ body {
 #top-nav {
 	display: none;
 }
-
 }
