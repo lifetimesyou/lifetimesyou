@@ -9,7 +9,7 @@ The Life and Times of You is an art project bringing together literature, music,
 
 [Matt Debski][2] composes the music.
 
-[Jakub Swiadek][3] designed and coded the website.
+[Jakub Swiadek][3] designed the website.
 
 [1]: https://www.facebook.com/adamstempniak
 [2]: http://soundsbyele.com

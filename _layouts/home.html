@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 
-	<title>{{ page.title }}</title>
+	<title>{{ page.project-name }}</title>
 	<meta name="author" content="{{ page.author }}" />
 	<meta name="description" content="" />
 
@@ -30,7 +30,7 @@
 		
 	</style>
 	
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:700,900|Merriweather:400,400i" rel="stylesheet">
 
 </head>
 
@@ -66,8 +66,10 @@
 			<div class="post-wrapper">
 				<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
 					<span></span>
-					<h1>{{ post.title | uppercase }}</h1>
-					<span>{{post.date | date: '%B %d, %Y'}}</span>
+					<h1 class="post-title">{{ post.title | uppercase }}</h1>
+					<span>
+						{{post.date | date: '%B %e, %Y'}}
+					</span>
 				</a>
 			</div>
 		{% endfor %}
@@ -80,6 +82,8 @@
 			<li><a href="https://www.facebook.com/thelifeandtimesofyou" id="facebook-link">{% include svg/facebook.svg %}</a></li>
 		</ol>
 	</nav>
+	
+<button id="font-button" onclick="switchFont()" style="position: fixed; bottom: 2em; left: 2em;"></button>
 
 <script src="assets/js/functions.js"></script>
 

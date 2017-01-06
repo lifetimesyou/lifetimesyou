@@ -1,8 +1,10 @@
+permalink: /:title
+
 defaults:
   -
     scope:
       path: ""
     values:
-      name: "The Life and Times of You"
+      project-name: "The Life and Times of You"
       layout: "post"
       author: "Adam Stempniak, Mateusz Dębski, Jakub Świadek"

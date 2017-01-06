@@ -1,6 +1,0 @@
-- mockup same font titles
-
-- fallback fonts
-- figure out metadata
-
-- ajax transitions

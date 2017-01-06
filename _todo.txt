@@ -1,0 +1,11 @@
+- fallback fonts
+- figure out metadata
+- two-part stories
+- gradient story
+
+---
+
+FU:
+- list of titles
+- share button on the end of the story
+- leave slack

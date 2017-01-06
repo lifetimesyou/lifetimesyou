@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 
-	<title>{{ page.name }} | {{ page.title }}</title>
+	<title>{{ page.title }} | {{ page.project-name }}</title>
 	<meta name="author" content="{{ page.author }}" />
 	<meta name="description" content="" />
 
@@ -17,11 +17,11 @@
 
 	<meta name="twitter:card" content="">
 	<meta name="twitter:site" content="">
-	<meta name="twitter:title" content="{{ page.name }} | {{ page.title }}">
+	<meta name="twitter:title" content="{{ page.title }} | {{ page.project-name }}">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:url" content="">
 
-	<meta property="og:title" content="{{ page.name }} | {{ page.title }}" />
+	<meta property="og:title" content="{{ page.title }} | {{ page.project-name }}" />
 	<meta property="og:description" content="" />
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
@@ -53,7 +53,7 @@
 		
 	</style>
 	
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:700,900|Merriweather:400,400i" rel="stylesheet">
 
 </head>
 
@@ -61,25 +61,46 @@
 
 	<header>
 		<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
-
-		<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3"></audio>
+		
+		{% if page.title == "About" %}
+			<div id="right-side">
 			
-		<div id="audio-controls" onclick="switchPlayback()">
-			{% include svg/play.svg %}
-			{% include svg/pause.svg %}
-		</div>
+				<nav id="top-nav">
+					<ol>
+						<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
+						<li><a href="http://twtter.com" id="twitter-link">{% include svg/twitter.svg %}</a></li>
+						<li><a href="http://facebook.com" id="facebook-link">{% include svg/facebook.svg %}</a></li>
+					</ol>
+				</nav>
+				
+				<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
+					
+				<div id="audio-controls" onclick="switchPlayback()">
+					{% include svg/play.svg %}
+					{% include svg/pause.svg %}
+				</div>
+			
+			</div>
+		{% else %}
+		  	<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3"></audio>
+		  	
+  			<div id="audio-controls" onclick="switchPlayback()">
+				{% include svg/play.svg %}
+				{% include svg/pause.svg %}
+			</div>
+		{% endif %}
 		
 	</header>
 	
-	<div id="title">
-		{{ page.title | uppercase }}
-	</div>
+	<h1 id="title">{{ page.title }}</h1>
 
 	<article>
 		{{ content }}
 	</article>
 	
 	<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
+	
+<button id="font-button" onclick="switchFont()" style="position: fixed; bottom: 2em; left: 2em;"></button>
 
 <script src="{{site.baseurl}}/assets/js/functions.js"></script>
 
