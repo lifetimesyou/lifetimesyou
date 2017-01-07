@@ -1,4 +1,3 @@
-- two-part stories
 - gradient story
 - text selection colors
 

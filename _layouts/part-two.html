@@ -49,7 +49,7 @@
 	
 	var link = document.createElement("a")
 	link.innerHTML = "Go back"
-	link.setAttribute("href", "{{ page.previous.url }}")
+	link.setAttribute("href", "{{ page.previous.url }}#last-paragraph")
 	
 	article.replaceChild(wrapper, firstParagraph)
     wrapper.appendChild(link)
