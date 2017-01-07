@@ -1,0 +1,60 @@
+<!doctype html>
+
+<head>
+	{% include layout/head.html %}
+		
+	<style>
+		article div p {
+			background: -webkit-linear-gradient({{ page.color2 }}, {{ page.color1 }});
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		article div a {
+			color: {{ page.color1 }};
+			border-color: {{ page.color1 }};
+			background-color: {{ page.color2 }};
+		}
+	</style>
+</head>
+
+<body id="post">
+
+	<header>
+		<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
+		
+	  	<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3"></audio>
+	  	
+		<div id="audio-controls" onclick="switchPlayback()">
+			{% include svg/play.svg %}
+			{% include svg/pause.svg %}
+		</div>
+		
+	</header>
+
+	<article>
+		{{ content }}
+	</article>
+	
+	<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
+	
+<button id="font-button" onclick="switchFont()" style="position: fixed; bottom: 2em; left: 2em;"></button>
+
+<script src="{{site.baseurl}}/assets/js/functions.js"></script>
+
+<script>
+	var article = document.getElementsByTagName("article")[0]
+	var paragraphs = document.getElementsByTagName("p")
+	var firstParagraph = paragraphs[0]
+	var wrapper = document.createElement("div")
+	
+	var link = document.createElement("a")
+	link.innerHTML = "Go back"
+	link.setAttribute("href", "{{ page.previous.url }}")
+	
+	article.replaceChild(wrapper, firstParagraph)
+    wrapper.appendChild(link)
+    wrapper.appendChild(firstParagraph)
+</script>
+
+</body>
+</html>

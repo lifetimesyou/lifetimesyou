@@ -1,11 +1,11 @@
-- fallback fonts
-- figure out metadata
 - two-part stories
 - gradient story
+- text selection colors
 
 ---
 
 FU:
+- figure out metadata
 - list of titles
 - share button on the end of the story
 - leave slack

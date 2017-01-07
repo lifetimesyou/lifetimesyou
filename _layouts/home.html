@@ -26,10 +26,6 @@
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
 	
-	<style>
-		
-	</style>
-	
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,700,900|Merriweather:400,400i" rel="stylesheet">
 
 </head>
@@ -40,29 +36,13 @@
 
 		<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
 		
-		<div id="right-side">
-		
-			<nav id="top-nav">
-				<ol>
-					<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
-					<li><a href="http://twtter.com" id="twitter-link">{% include svg/twitter.svg %}</a></li>
-					<li><a href="http://facebook.com" id="facebook-link">{% include svg/facebook.svg %}</a></li>
-				</ol>
-			</nav>
-			
-			<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
-				
-			<div id="audio-controls" onclick="switchPlayback()">
-				{% include svg/play.svg %}
-				{% include svg/pause.svg %}
-			</div>
-		
-		</div>
+		{% include layout/header-nav.html %}
 
 	</header>
 	
 	<div id="posts">
 		{% for post in site.posts %}
+			{% if post.layout != "part-two" %}
 			<div class="post-wrapper">
 				<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
 					<span></span>
@@ -72,6 +52,7 @@
 					</span>
 				</a>
 			</div>
+			{% endif %}
 		{% endfor %}
 	</div>
 	

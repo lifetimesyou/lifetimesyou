@@ -157,6 +157,8 @@ nav {
 		p {
 			padding-bottom: 1em;
 		}
+		
+
 	}
 	
 	#date {
@@ -167,6 +169,23 @@ nav {
 		padding: 5em 0 8em;
 		font-family: "Lato", sans-serif;
 		font-weight: 700;
+	}
+}
+
+article div {
+	position: relative;
+	a {
+		padding: .5em 1em;
+		font-size: .75em;
+		font-family: "Lato", sans-serif;
+		font-weight: 700;
+		text-decoration: none;
+		border: 2px solid;
+		
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, calc(-50% - 1em));
 	}
 }
 
