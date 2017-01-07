@@ -11,9 +11,8 @@
 			padding-bottom: 0;
 		}
 		article div a {
-			color: {{ page.color1 }};
-			border-color: {{ page.color1 }};
-			background-color: {{ page.color2 }};
+			color: {{ page.color2 }};
+			background-color: {{ page.color1 }};
 		}
 		#post article {
 			margin-bottom: 6em;
@@ -53,7 +52,7 @@
 	wrapper.setAttribute("id", "last-paragraph")
 	
 	var link = document.createElement("a")
-	link.innerHTML = "Read what happened next..."
+	link.innerHTML = "↓"
 	link.setAttribute("href", "{{ page.next.url }}")
 	
     article.appendChild(wrapper)
