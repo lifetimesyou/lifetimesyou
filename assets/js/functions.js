@@ -6,7 +6,7 @@ if (getCookie("font_setting") == "uppercase") {
 	var titles = document.getElementsByTagName("h1")
 	for (var i = 0; i < titles.length; i++) {
 	    titles[i].style.textTransform = "uppercase"
-		titles[i].style.fontWeight = 100
+		titles[i].style.fontWeight = 300
 	}
 } else {
 	document.getElementById("font-button").innerHTML = "Switch to UPPERCASE"
@@ -30,7 +30,7 @@ function switchFont() {
 		
 		for (var i = 0; i < titles.length; i++) {
 		    titles[i].style.textTransform = "uppercase"
-		    titles[i].style.fontWeight = 100
+		    titles[i].style.fontWeight = 300
 		}	
 	}
 }
