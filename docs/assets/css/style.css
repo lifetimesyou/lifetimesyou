@@ -1,0 +1,170 @@
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+  background-color: #fafafa;
+  padding: 0 0.8em;
+  color: #666666; }
+
+p {
+  line-height: 1.6em; }
+  p a {
+    text-decoration: none;
+    color: #666666;
+    border-bottom: 2px solid #c0c0c0; }
+
+svg {
+  display: block; }
+
+#pause-button {
+  display: none; }
+
+header {
+  padding: 1em 0.2em 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  header #tlatoy-logo {
+    width: 5.3em;
+    height: 5.3em; }
+  header #audio-controls {
+    cursor: pointer; }
+    header #audio-controls svg {
+      width: 1.8em;
+      height: 1.8em;
+      fill: #B2B2B2; }
+  header #right-side {
+    display: flex;
+    align-items: center; }
+    header #right-side #audio-controls {
+      padding-left: 1.1em;
+      margin-left: 0.65em;
+      border-left: 3px solid #F2F2F2; }
+
+nav ol {
+  list-style: none;
+  display: flex;
+  align-items: center; }
+nav li {
+  display: inline-block;
+  margin: 0 0.65em; }
+nav #about-link svg {
+  width: 1.25em;
+  height: 1.25em; }
+nav #twitter-link svg {
+  width: 1.25em;
+  height: 1em; }
+nav #facebook-link svg {
+  width: 1.1em;
+  height: 1.1em; }
+
+#bottom-nav {
+  display: none;
+  margin: 2em 1em; }
+  #bottom-nav ol {
+    justify-content: center; }
+
+#posts {
+  flex-grow: 1;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  text-align: center; }
+  #posts .post-wrapper {
+    padding: .2em;
+    width: 33.3%; }
+  #posts .post-wrapper:first-child {
+    width: 66.6%; }
+  #posts a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    padding: 2em;
+    height: 10em;
+    border: 1px solid rgba(0, 0, 0, 0.05); }
+  #posts h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 3vw; }
+  #posts span {
+    font-size: .6em;
+    opacity: .5;
+    padding-top: 1em;
+    font-family: "Lato", sans-serif;
+    font-weight: 900; }
+
+#post header {
+  position: -webkit-sticky;
+  top: 0; }
+#post #title {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  font-family: "Lato", sans-serif;
+  font-weight: 900; }
+#post article {
+  line-height: 1.5em;
+  max-width: 28em;
+  margin: 0 auto; }
+  #post article p {
+    padding-bottom: 1em; }
+#post #date {
+  text-align: center;
+  font-size: .75em;
+  display: block;
+  opacity: .5;
+  padding: 5em 0 8em;
+  font-family: "Lato", sans-serif;
+  font-weight: 900; }
+
+article div {
+  position: relative; }
+  article div a {
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    padding: .16em 0;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+@media screen and (max-width: 1024px) {
+  #posts .post-wrapper {
+    width: 50%; }
+  #posts .post-wrapper:first-child {
+    width: 100%; }
+  #posts h1 {
+    font-size: 4.4vw; } }
+@media screen and (max-width: 680px) {
+  body {
+    font-size: 22px; }
+
+  #posts .post-wrapper {
+    width: 100%; }
+  #posts h1 {
+    font-size: 8vw; }
+
+  header #tlatoy-logo {
+    width: 4em;
+    height: 4em; } }
+@media screen and (max-width: 414px) {
+  body {
+    font-size: 20px; }
+
+  #home header #right-side #audio-controls {
+    border-left: none; }
+
+  #bottom-nav {
+    display: block; }
+
+  #top-nav {
+    display: none; } }
