@@ -1,5 +1,4 @@
 source: ./source
-destination: ./site
 
 permalink: /:title
 
