@@ -1,9 +1,0 @@
-- gradient story
-
----
-
-FU:
-- figure out metadata
-- list of titles
-- share button on the end of the story
-- leave slack

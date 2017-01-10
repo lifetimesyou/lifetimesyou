@@ -1,0 +1,13 @@
+- list of titles (longest, median, avg)
+- no bg-color for header in about?
+- title font size on mobile
+- gradient story
+- run hp testing stack on tlatoy
+- analytics
+
+---
+
+FU:
+- figure out metadata
+- share button on the end of the story
+- leave slack

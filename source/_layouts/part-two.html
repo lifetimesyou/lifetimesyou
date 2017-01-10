@@ -2,20 +2,16 @@
 
 <head>
 	{% include layout/head.html %}
-	
+		
 	<style>
 		article div p {
-			background: -webkit-linear-gradient({{ page.color1 }}, {{ page.color2 }});
+			background: -webkit-linear-gradient({{ page.color2 }}, {{ page.color1 }});
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-			padding-bottom: 0;
 		}
 		article div a {
 			color: {{ page.color2 }};
 			background-color: {{ page.color1 }};
-		}
-		#post article {
-			margin-bottom: 6em;
 		}
 	</style>
 </head>
@@ -33,31 +29,28 @@
 		</div>
 		
 	</header>
-	
-	<h1 id="title">{{ page.title }}</h1>
 
 	<article>
 		{{ content }}
 	</article>
 	
-<button id="font-button" onclick="switchFont()" style="position: fixed; bottom: 2em; left: 2em;"></button>
+	<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
 
 <script src="{{site.baseurl}}/assets/js/functions.js"></script>
 
 <script>
 	var article = document.getElementsByTagName("article")[0]
 	var paragraphs = document.getElementsByTagName("p")
-	var lastParagraph = paragraphs[paragraphs.length - 1]
+	var firstParagraph = paragraphs[0]
 	var wrapper = document.createElement("div")
-	wrapper.setAttribute("id", "last-paragraph")
 	
 	var link = document.createElement("a")
-	link.innerHTML = "↓"
-	link.setAttribute("href", "{{ page.next.url }}")
+	link.innerHTML = "↑"
+	link.setAttribute("href", "{{ page.previous.url }}#last-paragraph")
 	
-    article.appendChild(wrapper)
+	article.replaceChild(wrapper, firstParagraph)
     wrapper.appendChild(link)
-    wrapper.appendChild(lastParagraph)
+    wrapper.appendChild(firstParagraph)
 </script>
 
 </body>

@@ -121,15 +121,15 @@ nav {
 	h1 {
 		font-family: "Lato", sans-serif;
 		font-weight: 900;
-		font-size: 2em;
+		font-size: 3vw;
 	}
 	
 	span {
 		font-size: .6em;
-		opacity: .6;
+		opacity: .5;
 		padding-top: 1em;
 		font-family: "Lato", sans-serif;
-		font-weight: 700;
+		font-weight: 900;
 	}
 }
 
@@ -165,10 +165,10 @@ nav {
 		text-align: center;
 		font-size: .75em;
 		display: block;
-		opacity: .75;
+		opacity: .5;
 		padding: 5em 0 8em;
 		font-family: "Lato", sans-serif;
-		font-weight: 700;
+		font-weight: 900;
 	}
 }
 
@@ -181,7 +181,7 @@ article div {
 		padding: .16em 0;
 		text-align: center;
 		font-family: "Lato", sans-serif;
-		font-weight: 700;
+		font-weight: 900;
 		text-decoration: none;
 		
 		position: absolute;
@@ -200,6 +200,9 @@ article div {
 	.post-wrapper:first-child {
 		width: 100%;
 	}
+	h1 {
+		font-size: 4.4vw;
+	}
 }
 
 }
@@ -213,6 +216,9 @@ body {
 #posts {
 	.post-wrapper {
 		width: 100%;
+	}
+	h1 {
+		font-size: 8vw;
 	}
 }
 
