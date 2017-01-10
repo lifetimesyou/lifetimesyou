@@ -1,5 +1,4 @@
 - gradient story
-- sadly, revert to original files setup
 
 ---
 
