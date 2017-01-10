@@ -1,6 +1,7 @@
 ---
 title: About
 layout: about
+color2: "#FAFAFA"
 ---
 
 The Life and Times of You is an art project bringing together literature, music, and design to produce tastefully crafted, originally scored short stories about... you. Not you specifically, but you in general; anybody and nobody at the same time. In light of this, the stories are completely standalone, with only one thing in common—you.

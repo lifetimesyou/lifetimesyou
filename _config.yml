@@ -1,7 +1,7 @@
 source: ./source
-destination: ./docs
+destination: ./site
 
-permalink: /:title
+permalink: /:title.html
 
 defaults:
   -

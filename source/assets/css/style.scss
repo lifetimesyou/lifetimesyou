@@ -4,7 +4,7 @@
 body {
 	font-family: 'Merriweather', serif;
 	font-size: 24px;
-	background-color: hsl(0, 0, 98);
+	background-color: #FAFAFA;
 	padding: 0 0.8em;
 	color: #666666;
 }
@@ -95,6 +95,7 @@ nav {
 	height: 100%;
 	flex-wrap: wrap;
 	text-align: center;
+	margin-bottom: 1em;
 	
 	.post-wrapper {
 		padding: .2em;
@@ -144,7 +145,7 @@ nav {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 4em;
+		font-size: 8vw;
 		font-family: "Lato", sans-serif;
 		font-weight: 900;
 	}
@@ -222,13 +223,6 @@ body {
 	}
 }
 
-header {
-	#tlatoy-logo {
-		width: 4em;
-		height: 4em;
-	}
-}
-
 }
 
 @media screen and (max-width: 414px) {
@@ -237,15 +231,11 @@ body {
 	font-size: 20px;
 }
 
-#home header #right-side #audio-controls {
-	border-left: none;
 }
 
-#bottom-nav {
-	display: block;
-}
-
-#top-nav {
-	display: none;
+@media screen and (max-width: 375px) {
+	
+body {
+	font-size: 16px;
 }
 }
