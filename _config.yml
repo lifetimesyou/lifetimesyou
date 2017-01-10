@@ -1,6 +1,3 @@
-source: ./source
-destination: ./site
-
 permalink: /:title.html
 
 defaults:
