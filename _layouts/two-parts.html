@@ -1,0 +1,127 @@
+<!doctype html>
+
+<head>
+	{% include layout/head.html %}
+	
+	<style>
+		#first-part p:last-child {
+			background: -webkit-linear-gradient({{ page.color1 }}, {{ page.color2 }} 120%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		#second-part p:first-child {
+			background: -webkit-linear-gradient({{ page.color4 }} -20%, {{ page.color3 }});
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		article a {
+			color: {{ page.color2 }};
+			background-color: {{ page.color1 }};
+		}
+		#second-part {
+			display: none;
+		}
+		#button-top svg {
+			fill: {{ page.color3 }};
+		}
+	</style>
+</head>
+
+<body id="post">
+
+	<header>
+		<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
+		
+	  	<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3"></audio>
+	  	
+		<div id="audio-controls" onclick="switchPlayback()">
+			{% include svg/play.svg %}
+			{% include svg/pause.svg %}
+		</div>
+		
+	</header>
+	
+	<h1 id="title">{{ page.title }}</h1>
+	
+	<button id="button-top" style="display: none" onclick="toggleParts()">{% include svg/arrow-down.svg %}</button>
+	<article>
+		{{ content }}
+	</article>
+	<button id="button-bottom" onclick="toggleParts()">{% include svg/arrow-down.svg %}</button>
+
+<script src="{{site.baseurl}}/assets/js/functions.js"></script>
+
+<script>
+	var article = document.getElementsByTagName("article")[0]
+	var children = []
+	var firstPart = document.createElement("DIV")
+	firstPart.setAttribute("id", "first-part")
+	var secondPart = document.createElement("DIV")
+	secondPart.setAttribute("id", "second-part")
+	
+	for (var i = 1; i < article.childNodes.length; i += 2) {
+    	children.push(article.childNodes[i])
+	}
+	
+	function findRule(element) {
+		return element.tagName == "HR"
+	}
+	
+	var hr = children.findIndex(findRule)
+
+	for (var i = 0; i < hr; i++) {
+    	firstPart.appendChild(children[i])
+	}
+	
+	for (var i = hr + 1; i < children.length; i++) {
+    	secondPart.appendChild(children[i])
+	}
+	
+	article.innerHTML = ""
+	
+	article.appendChild(firstPart)
+	article.appendChild(secondPart)
+	
+	var showingSecondPart = false
+	
+	function toggleParts() {
+		if (showingSecondPart) {
+			firstPart.style.display = null
+			secondPart.style.display = null
+			document.getElementById("title").style.display = null
+			document.body.style.backgroundColor = null
+			document.body.style.color = null
+			document.getElementById("logo-svg").style.fill = null
+			document.getElementById("play-button").style.fill = null
+			document.getElementById("pause-button").style.fill = null
+			document.getElementById("button-top").style.display = "none"
+			document.getElementById("button-bottom").style.display = "block"
+			window.scrollTo(0, document.body.scrollHeight)
+			
+			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3")
+			document.getElementById("player").play()
+			
+			showingSecondPart = false
+		} else {
+			firstPart.style.display = "none"
+			secondPart.style.display = "block"
+			document.getElementById("title").style.display = "none"
+			document.body.style.backgroundColor = "{{ page.color4 }}"
+			document.body.style.color = "{{ page.color3 }}"
+			document.getElementById("logo-svg").style.fill = "{{ page.color3 }}"
+			document.getElementById("play-button").style.fill = "{{ page.color3 }}"
+			document.getElementById("pause-button").style.fill = "{{ page.color3 }}"
+			document.getElementById("button-top").style.display = "block"
+			document.getElementById("button-bottom").style.display = "none"
+			document.body.scrollTop = document.documentElement.scrollTop = 0
+			
+			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}-2.mp3")
+			document.getElementById("player").play()
+			
+			showingSecondPart = true
+		}
+	}	
+</script>
+
+</body>
+</html>

@@ -29,16 +29,20 @@
 		background: {{ page.color1 }};
 	}
 	
-	body {
+	html {
 		background-color: {{ page.color2 }};
+	}
+	
+	body {
+		{% if page.color21 == "" or page.color21 == nil %}
+			background-color: {{ page.color2 }};
+		{% else %}
+			background: -webkit-linear-gradient({{ page.color2 }} 0%, {{ page.color21 }} 100%);
+		{% endif %}
 		color: {{ page.color1 }}
 	}
 	
 	svg {
-		fill: {{ page.color1 }}
-	}
-	
-	header a svg {
 		fill: {{ page.color1 }}
 	}
 	
