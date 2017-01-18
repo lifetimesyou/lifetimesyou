@@ -58,6 +58,9 @@
 	firstPart.setAttribute("id", "first-part")
 	var secondPart = document.createElement("DIV")
 	secondPart.setAttribute("id", "second-part")
+	var dateFooter = document.createElement("SPAN")
+	dateFooter.setAttribute("id", "date")
+	dateFooter.innerHTML = "{{page.date | date: '%B %d, %Y'}}"
 	
 	for (var i = 1; i < article.childNodes.length; i += 2) {
     	children.push(article.childNodes[i])
@@ -76,6 +79,7 @@
 	for (var i = hr + 1; i < children.length; i++) {
     	secondPart.appendChild(children[i])
 	}
+	secondPart.appendChild(dateFooter)
 	
 	article.innerHTML = ""
 	

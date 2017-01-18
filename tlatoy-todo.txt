@@ -1,7 +1,9 @@
-- issue with width on smaller devices (jekyll title length variable)
 - two parter with gradient
-- two versions of cover image for social
+
 - text padding on mobile? (both axises)
+- issue with width on smaller devices (jekyll title length variable)
+
 - adjust title position
 
 - description for mainpage
+- decide on social image style, prepare a template
