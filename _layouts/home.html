@@ -6,7 +6,7 @@
 
 	<title>{{ page.project-name }}</title>
 	<meta name="author" content="{{ page.author }}" />
-	<meta name="description" content="" />
+	<meta name="description" content="{{ page.project-description }}" />
 
 	<meta name="Copyright" content="{{ page.author }}" />
 
@@ -17,16 +17,17 @@
 	<link rel="stylesheet" href="/assets/css/reset.css" />
 	<link rel="stylesheet" href="/assets/css/style.css" />
 
-	<meta name="twitter:card" content="">
-	<meta name="twitter:site" content="">
-	<meta name="twitter:title" content="">
-	<meta name="twitter:description" content="">
-	<meta name="twitter:url" content="">
-
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:image" content="" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@lifetimesyou" />
+	<meta name="twitter:title" content="{{ page.project-name }}" />
+	<meta name="twitter:description" content="{{ page.project-description }}" />
+	<meta name="twitter:url" content="http://thelifeandtimesofyou.com" />
+	<meta name="twitter:image" content="{{site.baseurl}}/assets/img/logo.png" />
+	
+	<meta property="og:title" content="{{ page.project-name }}" />
+	<meta property="og:description" content="{{ page.project-description }}" />
+	<meta property="og:url" content="http://thelifeandtimesofyou.com" />
+	<meta property="og:image" content="{{site.baseurl}}/assets/img/logo.png" />
 	
 	<link href="https://fonts.googleapis.com/css?family=Lato:900|Merriweather:400,400i" rel="stylesheet">
 

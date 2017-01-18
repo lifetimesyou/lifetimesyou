@@ -1,7 +1,7 @@
 - issue with width on smaller devices (jekyll title length variable)
 - two parter with gradient
-- add all metadata
 - two versions of cover image for social
 - text padding on mobile? (both axises)
-- make it so layouts inherit from story layout
 - adjust title position
+
+- description for mainpage
