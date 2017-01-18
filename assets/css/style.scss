@@ -5,7 +5,6 @@ body {
 	font-family: 'Merriweather', serif;
 	font-size: 24px;
 	background-color: #FAFAFA;
-	padding: 0 0.8em;
 	color: #666666;
 }
 
@@ -27,7 +26,7 @@ svg {
 }
 
 header {
-	padding: 1em 0.2em 0.8em;
+	padding: 1em;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -95,7 +94,7 @@ nav {
 	height: 100%;
 	flex-wrap: wrap;
 	text-align: center;
-	margin-bottom: 1em;
+	margin: 0 0.8em 1em;
 	
 	.post-wrapper {
 		padding: .2em;
@@ -136,24 +135,26 @@ nav {
 
 #post {
 	header {
-		position: -webkit-sticky;
-		top: 0;
+		position: fixed;
+		width: 100%;
 	}
 	
 	#title {
-		height: 65vh;
+		height: 88vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 8vw;
 		font-family: "Lato", sans-serif;
 		font-weight: 900;
+		padding-top: 1.2em;
 	}
 		
 	article {
 		line-height: 1.5em;
-		max-width: 28em;
+		max-width: 30em;
 		margin: 0 auto;
+		padding: 1em;
 		
 		p {
 			padding-bottom: 1em;
@@ -183,6 +184,17 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+	
+#post {
+	header {
+		position: static;
+	}
+	#title {
+		height: 62vh;
+		padding-top: 0;
+		padding-bottom: 0.8em;
+	}
+}
 
 #posts {
 	.post-wrapper {
