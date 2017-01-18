@@ -4,3 +4,4 @@
 - two versions of cover image for social
 - text padding on mobile? (both axises)
 - make it so layouts inherit from story layout
+- adjust title position
