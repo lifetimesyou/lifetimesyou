@@ -44,7 +44,7 @@
 		{% for post in site.posts %}
 			{% if post.layout != "part-two" %}
 			<div class="post-wrapper">
-				<a href="{{post.url}}" style="background-color: {{post.color2}}; fill: {{post.color1}}; color: {{post.color1}}">
+				<a href="{{post.url}}" style="background-color: rgb({{post.bg-color}}); fill: rgb({{post.main-color}}); color: rgb({{post.main-color}})">
 					<span></span>
 					<h1 class="post-title">{{ post.title | uppercase }}</h1>
 					<span>

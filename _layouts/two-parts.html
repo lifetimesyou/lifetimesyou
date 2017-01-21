@@ -5,24 +5,20 @@
 	
 	<style>
 		#first-part p:last-child {
-			background: -webkit-linear-gradient({{ page.color1 }}, {{ page.color2 }} 120%);
+			background: -webkit-linear-gradient(rgba({{ page.main-color }}, 1), rgba({{ page.main-color }}, 0) 110%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 		}
 		#second-part p:first-child {
-			background: -webkit-linear-gradient({{ page.color4 }} -20%, {{ page.color3 }});
+			background: -webkit-linear-gradient(rgba({{ page.main-color-2 }}, 0) -10%, rgba({{ page.main-color-2 }}, 1));
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-		}
-		article a {
-			color: {{ page.color2 }};
-			background-color: {{ page.color1 }};
 		}
 		#second-part {
 			display: none;
 		}
 		#button-top svg {
-			fill: {{ page.color3 }};
+			fill: rgb({{ page.main-color-2 }});
 		}
 	</style>
 </head>
@@ -93,8 +89,9 @@
 			firstPart.style.display = null
 			secondPart.style.display = null
 			document.getElementById("title").style.display = null
-			document.body.style.backgroundColor = null
+			document.body.style.background = null
 			document.body.style.color = null
+			document.getElementsByTagName("html")[0].style.background = null
 			document.getElementById("logo-svg").style.fill = null
 			document.getElementById("play-button").style.fill = null
 			document.getElementById("pause-button").style.fill = null
@@ -110,11 +107,18 @@
 			firstPart.style.display = "none"
 			secondPart.style.display = "block"
 			document.getElementById("title").style.display = "none"
-			document.body.style.backgroundColor = "{{ page.color4 }}"
-			document.body.style.color = "{{ page.color3 }}"
-			document.getElementById("logo-svg").style.fill = "{{ page.color3 }}"
-			document.getElementById("play-button").style.fill = "{{ page.color3 }}"
-			document.getElementById("pause-button").style.fill = "{{ page.color3 }}"
+			
+			{% if page.bg-sec-color-2 == "" or page.bg-sec-color-2 == nil %}
+				document.body.style.background = "rgb({{ page.bg-color-2 }})"
+			{% else %}
+				document.body.style.background = "-webkit-linear-gradient(rgb({{ page.bg-color-2 }}) 0%, rgb({{ page.bg-sec-color-2 }}) 100%)"
+			{% endif %}
+			
+			document.getElementsByTagName("html")[0].style.background = "rgb({{ page.bg-color-2 }})"	
+			document.body.style.color = "rgb({{ page.main-color-2 }})"
+			document.getElementById("logo-svg").style.fill = "rgb({{ page.main-color-2 }})"
+			document.getElementById("play-button").style.fill = "rgb({{ page.main-color-2 }})"
+			document.getElementById("pause-button").style.fill = "rgb({{ page.main-color-2 }})"
 			document.getElementById("button-top").style.display = "block"
 			document.getElementById("button-bottom").style.display = "none"
 			document.body.scrollTop = document.documentElement.scrollTop = 0

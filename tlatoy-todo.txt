@@ -1,7 +1,2 @@
-- two parter with gradient
-- issue with width on smaller devices (jekyll title length variable)
-
-- - - 
-
 - description for mainpage
 - decide on social image style, prepare a template

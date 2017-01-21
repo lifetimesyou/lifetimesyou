@@ -1,11 +1,13 @@
 ---
-title: One of Two
+title: One of Two Gradient
 
-main-color: "255, 68, 0"
-bg-color: "102, 215, 209"
+main-color: "255, 255, 255"
+bg-color: "90, 105, 255"
+bg-sec-color: "0, 212, 175"
 
 main-color-2: "254, 95, 85"
 bg-color-2: "247, 247, 255"
+bg-sec-color-2: "207, 207, 155"
 
 layout: two-parts
 ---

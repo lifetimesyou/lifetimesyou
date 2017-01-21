@@ -28,29 +28,29 @@
 <style>
 	
 	::selection {
-		color: {{ page.color2 }};
-		background: {{ page.color1 }};
+		color: rgb({{ page.bg-color }});
+		background: rgb({{ page.main-color }});
 	}
 	
 	html {
-		background-color: {{ page.color2 }};
+		background-color: rgb({{ page.bg-color }});
 	}
 	
 	body {
-		{% if page.color21 == "" or page.color21 == nil %}
-			background-color: {{ page.color2 }};
+		{% if page.bg-sec-color == "" or page.bg-sec-color == nil %}
+			background-color: rgb({{ page.bg-color }});
 		{% else %}
-			background: -webkit-linear-gradient({{ page.color2 }} 0%, {{ page.color21 }} 100%);
+			background: -webkit-linear-gradient(rgb({{ page.bg-color }}) 0%, rgb({{ page.bg-sec-color }}) 100%);
 		{% endif %}
-		color: {{ page.color1 }}
+		color: rgb({{ page.main-color }});
 	}
 	
 	svg {
-		fill: {{ page.color1 }}
+		fill: rgb({{ page.main-color }});
 	}
 	
 	header #audio-controls svg {
-		fill: {{ page.color1 }};
+		fill: rgb({{ page.main-color }});
 	}
 	
 </style>
