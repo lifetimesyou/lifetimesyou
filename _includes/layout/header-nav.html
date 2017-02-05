@@ -1,18 +1,24 @@
-<div id="right-side">
-
-	<nav id="top-nav">
-		<ol>
-			<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
-			<li><a href="https://twitter.com/lifetimesyou" id="twitter-link">{% include svg/twitter.svg %}</a></li>
-			<li><a href="https://www.facebook.com/thelifeandtimesofyou" id="facebook-link">{% include svg/facebook.svg %}</a></li>
-		</ol>
-	</nav>
+<header>
+	<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
 	
-	<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
+	<div id="right-side">
+	
+		<nav id="top-nav">
+			<ol>
+				<li><a href="about.html" id="about-link">{% include svg/info.svg %}</a></li>
+			</ol>
+		</nav>
 		
-	<div id="audio-controls" onclick="switchPlayback()">
-		{% include svg/play.svg %}
-		{% include svg/pause.svg %}
+		{% if page.title == nil or page.title == "About" %}
+			<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
+		{% else %}
+			<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3"></audio>
+		{% endif %}
+			
+		<div id="audio-controls" onclick="switchPlayback()">
+			{% include svg/play.svg %}
+			{% include svg/pause.svg %}
+		</div>
+	
 	</div>
-
-</div>
+</header>

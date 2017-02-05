@@ -6,17 +6,7 @@
 
 <body id="post">
 
-	<header>
-		<a href="/" id="tlatoy-logo">{% include svg/logo.svg %}</a>
-		
-	  	<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3"></audio>
-	  	
-		<div id="audio-controls" onclick="switchPlayback()">
-			{% include svg/play.svg %}
-			{% include svg/pause.svg %}
-		</div>
-		
-	</header>
+	{% include layout/header-nav.html %}
 	
 	<h1 id="title">{{ page.title }}</h1>
 
