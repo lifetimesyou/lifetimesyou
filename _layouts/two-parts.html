@@ -70,15 +70,17 @@
 		if (showingSecondPart) {
 			firstPart.style.display = null
 			secondPart.style.display = null
-			document.getElementById("title").style.display = null
+			document.getElementById("title-container").style.display = null
 			document.body.style.background = null
 			document.body.style.color = null
 			document.getElementsByTagName("html")[0].style.background = null
 			document.getElementById("logo-svg").style.fill = null
 			document.getElementById("play-button").style.fill = null
 			document.getElementById("pause-button").style.fill = null
+			document.getElementById("about-icon").style.fill = null
 			document.getElementById("button-top").style.display = "none"
 			document.getElementById("button-bottom").style.display = "block"
+			document.getElementById("audio-controls").style.borderColor = null
 			window.scrollTo(0, document.body.scrollHeight)
 			
 			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3")
@@ -88,7 +90,7 @@
 		} else {
 			firstPart.style.display = "none"
 			secondPart.style.display = "block"
-			document.getElementById("title").style.display = "none"
+			document.getElementById("title-container").style.display = "none"
 			
 			{% if page.bg-sec-color-2 == "" or page.bg-sec-color-2 == nil %}
 				document.body.style.background = "rgb({{ page.bg-color-2 }})"
@@ -101,11 +103,13 @@
 			document.getElementById("logo-svg").style.fill = "rgb({{ page.main-color-2 }})"
 			document.getElementById("play-button").style.fill = "rgb({{ page.main-color-2 }})"
 			document.getElementById("pause-button").style.fill = "rgb({{ page.main-color-2 }})"
+			document.getElementById("about-icon").style.fill = "rgb({{ page.main-color-2 }})"
 			document.getElementById("button-top").style.display = "block"
 			document.getElementById("button-bottom").style.display = "none"
+			document.getElementById("audio-controls").style.borderColor = "rgba({{ page.main-color-2 }}, 0.2)"
 			document.body.scrollTop = document.documentElement.scrollTop = 0
 			
-			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}-2.mp3")
+			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.title | downcase }}-2.mp3")
 			document.getElementById("player").play()
 			
 			showingSecondPart = true
