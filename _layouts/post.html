@@ -8,13 +8,43 @@
 
 	{% include layout/header-nav.html %}
 	
-	<h1 id="title">{{ page.title }}</h1>
+	<div id="title-container">
+		<h1>{{ page.title }}</h1>
+		
+		{% if page.part-number != nil %}
+			<span>PART {{page.part-number}}</span>
+		{% endif %}
+	</div>
 
 	<article>
 		{{ content }}
 	</article>
 	
 	<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
+	
+	{% if page.part-count != nil %}
+		<div id="part-picker">
+				{% assign count = 1 %}
+				
+				{% for post in site.posts %}
+					{% if post.title == page.title %}
+						{% assign count = count | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+				
+				{% for i in (1..page.part-count) %}
+					{% if i < count %}
+						{% if i == page.part-number %}
+							<a id="part-current">{{ i }}</a>
+						{% else %}
+							<a href="{{ site.baseurl }}/{{ page.title | downcase }}-{{i}}.html">{{ i }}</a>
+						{% endif %}
+					{% else %}
+						<a id="part-unpublished">{{ i }}</a>
+					{% endif %}
+				{% endfor %}
+		</div>
+	{% endif %}
 
 <script src="{{site.baseurl}}/assets/js/functions.js"></script>
 

@@ -17,7 +17,9 @@
 
 	{% include layout/header-nav.html %}
 	
-	<h1 id="title">{{ page.title }}</h1>
+	<div id="title-container">
+		<h1>{{ page.title }}</h1>
+	</div>
 	
 	<button id="button-top" style="display: none" onclick="toggleParts()">{% include svg/arrow-down.svg %}</button>
 	<article>

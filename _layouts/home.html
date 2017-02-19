@@ -42,7 +42,11 @@
 			{% if post.layout != "part-two" %}
 			<div class="post-wrapper">
 				<a href="{{post.url}}" style="background-color: rgb({{post.bg-color}}); fill: rgb({{post.main-color}}); color: rgb({{post.main-color}})">
-					<span></span>
+					<span id="part-id">
+						{% if post.part-number != nil %}
+							PART {{ post.part-number }}
+						{% endif %}
+					</span>
 					<h1 class="post-title">{{ post.title | uppercase }}</h1>
 					<span>
 						{{post.date | date: '%B %e, %Y'}}
