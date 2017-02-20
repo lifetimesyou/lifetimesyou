@@ -83,7 +83,7 @@
 			document.getElementById("audio-controls").style.borderColor = null
 			window.scrollTo(0, document.body.scrollHeight)
 			
-			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.mp3")
+			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.id }}.mp3")
 			document.getElementById("player").play()
 			
 			showingSecondPart = false
@@ -109,7 +109,7 @@
 			document.getElementById("audio-controls").style.borderColor = "rgba({{ page.main-color-2 }}, 0.2)"
 			document.body.scrollTop = document.documentElement.scrollTop = 0
 			
-			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.title | downcase }}-2.mp3")
+			document.getElementById("player").setAttribute("src", "{{site.baseurl}}/assets/mp3/{{ page.id }}-2.mp3")
 			document.getElementById("player").play()
 			
 			showingSecondPart = true

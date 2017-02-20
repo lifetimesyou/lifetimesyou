@@ -12,7 +12,7 @@
 		{% if page.title == nil or page.title == "About" %}
 			<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/index.mp3"></audio>
 		{% else %}
-			<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.title | downcase }}.mp3"></audio>
+			<audio id="player" autoplay loop src="{{site.baseurl}}/assets/mp3/{{ page.id }}.mp3"></audio>
 		{% endif %}
 			
 		<div id="audio-controls" onclick="switchPlayback()">

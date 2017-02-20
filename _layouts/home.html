@@ -44,7 +44,7 @@
 				<a href="{{post.url}}" style="background-color: rgb({{post.bg-color}}); fill: rgb({{post.main-color}}); color: rgb({{post.main-color}})">
 					<span id="part-id">
 						{% if post.part-number != nil %}
-							PART {{ post.part-number }}
+							PART {{ post.part-number | roman }}
 						{% endif %}
 					</span>
 					<h1 class="post-title">{{ post.title | uppercase }}</h1>

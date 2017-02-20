@@ -18,12 +18,12 @@
 <meta name="twitter:title" content="{{ page.title }} | {{ page.project-name }}" />
 <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 50 }}" />
 <meta name="twitter:url" content="http://thelifeandtimesofyou.com/{{ page.url }}" />
-<meta name="twitter:image" content="http://thelifeandtimesofyou.com/assets/img/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.png" />
+<meta name="twitter:image" content="http://thelifeandtimesofyou.com/assets/img{{ page.id }}.png" />
 
 <meta property="og:title" content="{{ page.title }} | {{ page.project-name }}" />
 <meta property="og:description" content="{{ page.content | strip_html | truncatewords: 50 }}" />
 <meta property="og:url" content="http://thelifeandtimesofyou.com/{{ page.url }}" />
-<meta property="og:image" content="http://thelifeandtimesofyou.com/assets/img/{{ page.date | date: '%Y-%m-%d'}}-{{ page.title | downcase }}.png" />
+<meta property="og:image" content="http://thelifeandtimesofyou.com/assets/img{{ page.id }}.png" />
 
 <style>
 	

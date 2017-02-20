@@ -235,19 +235,24 @@ button svg {
 	padding: 0 0 6em;
 	
 	a {
-		width: 2em;
-		height: 2em;
+		font-size: .8em;
+		
+		width: 2.4em;
+		height: 2.4em;
 		border: 2px solid;
-		border-radius: 1em;
+		border-radius: 1.2em;
 		text-align: center;
 		
 		margin: .3em;
-		padding: .3em 0;
+		padding: .47em 0;
 		
 		text-decoration: none;
 		color: inherit;
 		
 		cursor: pointer;
+		
+		flex-shrink: 0;
+		flex-wrap: wrap;
 	}
 	
 	a#part-unpublished {

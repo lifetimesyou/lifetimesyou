@@ -12,7 +12,7 @@
 		<h1>{{ page.title }}</h1>
 		
 		{% if page.part-number != nil %}
-			<span>PART {{page.part-number}}</span>
+			<span>PART {{ page.part-number | roman }}</span>
 		{% endif %}
 	</div>
 
@@ -35,12 +35,12 @@
 				{% for i in (1..page.part-count) %}
 					{% if i < count %}
 						{% if i == page.part-number %}
-							<a id="part-current">{{ i }}</a>
+							<a id="part-current">{{ i | roman }}</a>
 						{% else %}
-							<a href="{{ site.baseurl }}/{{ page.title | downcase }}-{{i}}.html">{{ i }}</a>
+							<a href="{{ site.baseurl }}/{{ page.title | downcase }}-{{i}}.html">{{ i | roman }}</a>
 						{% endif %}
 					{% else %}
-						<a id="part-unpublished">{{ i }}</a>
+						<a id="part-unpublished">{{ i | roman }}</a>
 					{% endif %}
 				{% endfor %}
 		</div>
