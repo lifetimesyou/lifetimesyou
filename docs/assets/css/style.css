@@ -1,0 +1,220 @@
+::selection {
+  color: #FAFAFA;
+  background-color: #666666; }
+
+body, button {
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+  background-color: #FAFAFA;
+  color: #666666; }
+
+p {
+  line-height: 1.6em; }
+  p a {
+    text-decoration: none;
+    color: #666666;
+    border-bottom: 2px solid #c0c0c0; }
+
+svg {
+  display: block; }
+
+#pause-button {
+  display: none; }
+
+header {
+  padding: 1em 1em .8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  header #tlatoy-logo {
+    width: 5.3em;
+    height: 5.3em; }
+  header #right-side {
+    display: flex;
+    align-items: center; }
+    header #right-side svg {
+      fill: #B2B2B2; }
+    header #right-side #audio-controls {
+      padding-left: 1.1em;
+      margin-left: 0.55em;
+      border-left: 3px solid;
+      border-color: #F2F2F2;
+      cursor: pointer; }
+      header #right-side #audio-controls svg {
+        width: 1.8em;
+        height: 1.8em; }
+
+nav ol {
+  list-style: none;
+  display: flex;
+  align-items: center; }
+nav li {
+  display: inline-block;
+  margin: 0 0.65em; }
+nav #about-link svg {
+  width: 1.25em;
+  height: 1.25em; }
+nav #twitter-link svg {
+  width: 1.25em;
+  height: 1em; }
+nav #facebook-link svg {
+  width: 1.1em;
+  height: 1.1em; }
+
+#bottom-nav {
+  display: none;
+  margin: 2em 1em; }
+  #bottom-nav ol {
+    justify-content: center; }
+
+#posts {
+  flex-grow: 1;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 0.8em 1em; }
+  #posts .post-wrapper {
+    padding: .2em;
+    width: 33.3%; }
+  #posts .post-wrapper:first-child {
+    width: 66.6%; }
+  #posts a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    padding: 2em;
+    height: 10em;
+    border: 1px solid rgba(0, 0, 0, 0.05); }
+  #posts h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 3vw; }
+  #posts span {
+    font-size: .6em;
+    opacity: .5;
+    padding-top: 1em;
+    font-family: "Lato", sans-serif;
+    font-weight: 900; }
+  #posts #part-id {
+    font-size: .83em;
+    padding-top: 0;
+    padding-bottom: .3em; }
+
+#post header {
+  position: fixed;
+  width: 100%; }
+#post #title-container {
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Lato", sans-serif; }
+  #post #title-container h1 {
+    padding-top: 1.2em;
+    font-size: 8vw;
+    font-weight: 900; }
+  #post #title-container span {
+    font-size: 1.1em;
+    font-weight: 900;
+    opacity: .5;
+    padding-top: .5em; }
+#post article {
+  line-height: 1.5em;
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 1em; }
+  #post article p {
+    padding-bottom: 1em; }
+  #post article p:last-child {
+    padding-bottom: 0; }
+#post #date {
+  text-align: center;
+  font-size: .75em;
+  display: block;
+  opacity: .5;
+  padding: 6em 0 8em;
+  font-family: "Lato", sans-serif;
+  font-weight: 900; }
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 6em 0 8em;
+  border: none;
+  background: none;
+  outline: none; }
+
+button svg {
+  width: 1.9em;
+  height: 1.8em; }
+
+#button-top {
+  padding: 8em 0 6em; }
+  #button-top svg {
+    transform: rotate(180deg); }
+
+#part-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0 0 6em; }
+  #part-picker a {
+    font-size: .8em;
+    width: 2.4em;
+    height: 2.4em;
+    border: 2px solid;
+    border-radius: 1.2em;
+    text-align: center;
+    margin: .3em;
+    padding: .47em 0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
+    flex-wrap: wrap; }
+  #part-picker a#part-unpublished {
+    opacity: .3; }
+
+@media screen and (max-width: 1024px) {
+  #post header {
+    position: static; }
+  #post #title-container {
+    height: 62vh;
+    padding-top: 0;
+    padding-bottom: 0.8em; }
+
+  #posts .post-wrapper {
+    width: 50%; }
+  #posts .post-wrapper:first-child {
+    width: 100%; }
+  #posts h1 {
+    font-size: 4.4vw; }
+
+  button {
+    padding: 1em 0 5em; }
+
+  #button-top {
+    padding: 2em 0 1em; } }
+@media screen and (max-width: 680px) {
+  body, button {
+    font-size: 22px; }
+
+  #posts .post-wrapper {
+    width: 100%; }
+  #posts h1 {
+    font-size: 8vw; } }
+@media screen and (max-width: 414px) {
+  body, button {
+    font-size: 20px; } }
+@media screen and (max-width: 375px) {
+  body, button {
+    font-size: 16px; } }
