@@ -11,4 +11,4 @@ defaults:
       author: "Adam Stempniak, Mateusz Dębski, Jakub Świadek"
       
 gems:
-   - jekyll-roman
+  - jekyll-roman
