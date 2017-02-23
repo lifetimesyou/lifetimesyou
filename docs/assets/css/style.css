@@ -130,7 +130,7 @@ nav #facebook-link svg {
   padding: 1em; }
   #post article p {
     padding-bottom: 1em; }
-  #post article p:last-child {
+  #post article p:last-child, #post article div p:last-child {
     padding-bottom: 0; }
 #post #date {
   text-align: center;

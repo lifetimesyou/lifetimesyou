@@ -184,9 +184,10 @@ nav {
 			padding-bottom: 1em;
 		}
 		
-		p:last-child {
+		p:last-child, div p:last-child {
 			padding-bottom: 0;
 		}
+		
 	}
 	
 	#date {

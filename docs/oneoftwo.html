@@ -167,6 +167,7 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 	</article>
+	<span style="display: none" id="date">January 05, 2017</span>
 	<button id="button-bottom" onclick="toggleParts()"><svg id="arrow-down" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
   <path fill-rule="evenodd" d="M22,44 C34.1502645,44 44,34.1502645 44,22 C44,9.8497355 34.1502645,0 22,0 C9.8497355,0 0,9.8497355 0,22 C0,34.1502645 9.8497355,44 22,44 Z M13.4336559,17.9519202 C12.3025326,17.1601339 10.7437065,17.4352209 9.9519202,18.5663441 C9.16013393,19.6974674 9.4352209,21.2562935 10.5663441,22.0480798 L20.5663441,29.0480798 C21.4271445,29.6506401 22.5728555,29.6506401 23.4336559,29.0480798 L33.4336559,22.0480798 C34.5647791,21.2562935 34.8398661,19.6974674 34.0480798,18.5663441 C33.2562935,17.4352209 31.6974674,17.1601339 30.5663441,17.9519202 L22,23.9483611 L13.4336559,17.9519202 Z"/>
 </svg></button>
@@ -180,9 +181,6 @@
 	firstPart.setAttribute("id", "first-part")
 	var secondPart = document.createElement("DIV")
 	secondPart.setAttribute("id", "second-part")
-	var dateFooter = document.createElement("SPAN")
-	dateFooter.setAttribute("id", "date")
-	dateFooter.innerHTML = "January 05, 2017"
 	
 	for (var i = 1; i < article.childNodes.length; i += 2) {
     	children.push(article.childNodes[i])
@@ -201,7 +199,6 @@
 	for (var i = hr + 1; i < children.length; i++) {
     	secondPart.appendChild(children[i])
 	}
-	secondPart.appendChild(dateFooter)
 	
 	article.innerHTML = ""
 	
@@ -230,6 +227,8 @@
 			document.getElementById("player").setAttribute("src", "/assets/mp3//oneoftwo.mp3")
 			document.getElementById("player").play()
 			
+			document.getElementById("date").style.display = "none"
+			
 			showingSecondPart = false
 		} else {
 			firstPart.style.display = "none"
@@ -253,6 +252,8 @@
 			
 			document.getElementById("player").setAttribute("src", "/assets/mp3//oneoftwo-2.mp3")
 			document.getElementById("player").play()
+			
+			document.getElementById("date").style.display = "block"
 			
 			showingSecondPart = true
 		}
