@@ -93,11 +93,12 @@
 			
 			{% if page.bg-sec-color-2 == "" or page.bg-sec-color-2 == nil %}
 				document.body.style.background = "rgb({{ page.bg-color-2 }})"
+				document.getElementsByTagName("html")[0].style.background = "rgb({{ page.bg-color-2 }})"	
 			{% else %}
 				document.body.style.background = "-webkit-linear-gradient(rgb({{ page.bg-color-2 }}) 0%, rgb({{ page.bg-sec-color-2 }}) 100%)"
+				document.getElementsByTagName("html")[0].style.background = "rgb({{ page.bg-sec-color-2 }})"	
 			{% endif %}
 			
-			document.getElementsByTagName("html")[0].style.background = "rgb({{ page.bg-color-2 }})"	
 			document.body.style.color = "rgb({{ page.main-color-2 }})"
 			document.getElementById("logo-svg").style.fill = "rgb({{ page.main-color-2 }})"
 			document.getElementById("play-button").style.fill = "rgb({{ page.main-color-2 }})"

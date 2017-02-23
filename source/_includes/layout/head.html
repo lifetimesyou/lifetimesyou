@@ -33,7 +33,11 @@
 	}
 	
 	html {
+		{% if page.bg-sec-color == "" or page.bg-sec-color == nil %}
 		background-color: rgb({{ page.bg-color }});
+		{% else %}
+		background-color: rgb({{ page.bg-sec-color }});
+		{% endif %}
 	}
 	
 	body {
