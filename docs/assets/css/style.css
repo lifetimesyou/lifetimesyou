@@ -102,7 +102,7 @@ nav #facebook-link svg {
   #posts #part-id {
     font-size: .83em;
     padding-top: 0;
-    padding-bottom: .25em; }
+    padding-bottom: .2em; }
 
 #post header {
   position: fixed;
@@ -119,7 +119,7 @@ nav #facebook-link svg {
     font-size: 8vw;
     font-weight: 900; }
   #post #title-container span {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 900;
     opacity: .5;
     padding-top: .5em; }
@@ -137,14 +137,16 @@ nav #facebook-link svg {
   font-size: .75em;
   display: block;
   opacity: .5;
-  padding: 6em 0 10em;
+  padding: 4em 0 6.4em;
   font-family: "Lato", sans-serif;
   font-weight: 900; }
+#post #date-picker-container #date {
+  padding: 3.2em 0 4.6em; }
 
 button {
   display: block;
   margin: 0 auto;
-  padding: 6em 0 8em;
+  padding: 2.75em 0 4.25em;
   border: none;
   background: none;
   outline: none; }
@@ -154,7 +156,7 @@ button svg {
   height: 1.8em; }
 
 #button-top {
-  padding: 8em 0 6em; }
+  padding: 10em 0 2.6em; }
   #button-top svg {
     transform: rotate(180deg); }
 
@@ -166,7 +168,7 @@ button svg {
   font-weight: 900;
   -webkit-user-select: none;
   user-select: none;
-  padding: 0 0 6em; }
+  padding: 0 0 4em; }
   #part-picker a {
     font-size: .8em;
     width: 2.4em;
@@ -191,6 +193,10 @@ button svg {
     height: 62vh;
     padding-top: 0;
     padding-bottom: 0.8em; }
+  #post #date-picker-container #date {
+    padding: 0.8em 0 2.1em; }
+  #post #date {
+    padding: 0.8em 0 3.6em; }
 
   #posts .post-wrapper {
     width: 50%; }
@@ -200,10 +206,13 @@ button svg {
     font-size: 4.4vw; }
 
   button {
-    padding: 3em 0 5em; }
+    padding: 0.6em 0 1.9em; }
 
   #button-top {
-    padding: 2em 0 1em; } }
+    padding: 1em 0 0.8em; }
+
+  #part-picker {
+    padding: 0 0 1.7em; } }
 @media screen and (max-width: 680px) {
   body, button {
     font-size: 22px; }
@@ -214,7 +223,10 @@ button svg {
     font-size: 8vw; }
 
   #post #title-container span {
-    font-size: 0.9em; } }
+    font-size: 0.9em; }
+
+  #part-picker a {
+    padding: .38em 0; } }
 @media screen and (max-width: 414px) {
   body, button {
     font-size: 20px; } }

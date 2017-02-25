@@ -20,30 +20,34 @@
 		{{ content }}
 	</article>
 	
-	<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
 	
 	{% if page.part-count != nil %}
-		<div id="part-picker">
-				{% assign count = 1 %}
-				
-				{% for post in site.posts %}
-					{% if post.title == page.title %}
-						{% assign count = count | plus: 1 %}
-					{% endif %}
-				{% endfor %}
-				
-				{% for i in (1..page.part-count) %}
-					{% if i < count %}
-						{% if i == page.part-number %}
-							<a id="part-current">{{ i | roman }}</a>
-						{% else %}
-							<a href="{{ site.baseurl }}/{{ page.title | downcase }}-{{i}}.html">{{ i | roman }}</a>
+		<div id="date-picker-container">
+			<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
+			<div id="part-picker">
+					{% assign count = 1 %}
+					
+					{% for post in site.posts %}
+						{% if post.title == page.title %}
+							{% assign count = count | plus: 1 %}
 						{% endif %}
-					{% else %}
-						<a id="part-unpublished">{{ i | roman }}</a>
-					{% endif %}
-				{% endfor %}
+					{% endfor %}
+					
+					{% for i in (1..page.part-count) %}
+						{% if i < count %}
+							{% if i == page.part-number %}
+								<a id="part-current">{{ i | roman }}</a>
+							{% else %}
+								<a href="{{ site.baseurl }}/{{ page.title | downcase }}-{{i}}.html">{{ i | roman }}</a>
+							{% endif %}
+						{% else %}
+							<a id="part-unpublished">{{ i | roman }}</a>
+						{% endif %}
+					{% endfor %}
+			</div>
 		</div>
+	{% else %}
+		<span id="date">{{page.date | date: '%B %d, %Y'}}</span>
 	{% endif %}
 
 <script src="{{site.baseurl}}/assets/js/functions.js"></script>
